@@ -1,4 +1,5 @@
 # People / Pessoas
+Name / GScholar / DBLP / Personal Page
 
 ## Faculty / Professores
 
