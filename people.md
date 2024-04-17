@@ -1,5 +1,5 @@
 # People / Pessoas
-Name / GScholar / DBLP / Personal Page
+Name / GScholar / DBLP / Personal Page / Link to Photos
 
 ## Faculty / Professores
 
