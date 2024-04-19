@@ -1,0 +1,6 @@
+baseURL = "https://your_domain.com/"
+languageCode = "en"
+summaryLength = 25
+
+[taxonomies]
+author = "authors"
