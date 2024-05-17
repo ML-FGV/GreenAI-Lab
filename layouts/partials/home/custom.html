@@ -1,0 +1,9 @@
+<div id="page">
+  <section>
+    <h2 class="mt-8 text-2xl font-extrabold">Recent publications</h2>
+
+    {{ range where .Site.RegularPages "Section" "publications" | first 5 }}
+      {{ partial "article-link.html" . }}
+    {{ end }}
+  </section>
+</div>

@@ -1,0 +1,25 @@
+colorScheme = "avocado"
+defaultAppearance = "light"
+autoSwitchAppearance = false
+
+enableSearch = false
+enableCodeCopy = true
+enableImageLazyLoading = true
+
+footer.showAppearanceSwitcher = true
+header.layout = "hybrid"
+
+[homepage]
+layout = "custom"
+
+[list]
+showSummary = true
+showTaxonomies = true
+
+[article]
+showTableOfContents = true
+showTaxonomies = true
+showReadingTime = false
+showWordCount = true
+showPagination = true
+showAuthor = false
