@@ -1,0 +1,43 @@
+{{ define "main" }}
+<article>
+  <style scoped>
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 9rem);
+      gap: 50px;
+    }
+  </style>
+
+  <h1 class="text-4xl font-bold mb-6">People</h1>
+
+  {{
+    range $role_title, $role_slice
+    := dict
+    "Alumni" (slice "Alumnus" "Alumna")
+  }}
+  <h2 class="text-2xl font-bold mb-3">{{ $role_title }}</h2>
+
+  <div class="role-grid">
+    {{
+      range
+      where (where $.Site.Pages "Section" "people")
+      "Params.role" "in" $role_slice
+    }}
+    <a href="{{ .RelPermalink }}" class="text-center">
+      <picture class="block" style="width: 9rem; height: 9rem;">
+        <img
+          class="mb-2 w-full h-full object-cover rounded-full"
+          alt="Person picture" loading="lazy"
+          src="{{ .Params.picture }}">
+      </picture>
+      <h3 class="font-bold">{{ .Title }}</h3>
+      {{ if .Params.description }}
+      <p>{{ .Params.description }}</p>
+      {{end }}
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</article>
+{{ end }}

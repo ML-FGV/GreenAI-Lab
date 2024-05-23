@@ -3,4 +3,4 @@ languageCode = "en"
 summaryLength = 25
 
 [taxonomies]
-author = "authors"
+people = "people"

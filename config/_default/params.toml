@@ -6,8 +6,13 @@ enableSearch = false
 enableCodeCopy = true
 enableImageLazyLoading = true
 
-footer.showAppearanceSwitcher = true
-header.layout = "hybrid"
+[header]
+layout = "hybrid"
+# logo = "logo.png"
+showTitle = true
+
+[footer]
+showAppearanceSwitcher = true
 
 [homepage]
 layout = "custom"
@@ -20,6 +25,7 @@ showTaxonomies = true
 showTableOfContents = true
 showTaxonomies = true
 showReadingTime = false
-showWordCount = true
+showWordCount = false
 showPagination = true
 showAuthor = false
+showBreadcrumbs = false

@@ -1,0 +1,59 @@
+{{ define "main" }}
+<article>
+  <header class="mb-6 flex flex-col items-center text-center">
+    {{ with .Page.Params.picture }}
+      {{ if . }}
+      <picture class="block" style="width: 12rem; height: 12rem;">
+        <img
+          class="mb-2 w-full h-full object-cover rounded-full"
+          alt="Person picture" loading="lazy"
+          src="{{ . }}">
+      </picture>
+      {{ end }}
+    {{ end }}
+
+
+    <h1 class="text-4xl font-extrabold">
+      {{ .Page.Title }}
+    </h1>
+    {{ with .Page.Params.description }}
+      <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
+        {{ . | markdownify | emojify }}
+      </h2>
+    {{ end }}
+
+    <div class="mt-1 text-2xl">
+      {{ with .Page.Params.links }}
+        <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+          {{ range $links := . }}
+            {{ range $name, $url := $links }}
+              <a
+                class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+                style="will-change:transform;"
+                href="{{ $url | safeURL }}"
+                target="_blank"
+                aria-label="{{ $name | title }}"
+                rel="me noopener noreferrer"
+                >{{ partial "icon.html" $name }}</a
+              >
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </header>
+
+  <section class="prose dark:prose-invert max-w-full">{{ .Content | emojify }}</section>
+
+  <h2 class="text-2xl font-extrabold mt-8">Recent publications</h2>
+
+  {{
+    range
+    where (where .Site.RegularPages "Section" "publications")
+    "Params.people" "intersect" (slice .Page.Params.id)
+  }}
+    {{ partial "article-link.html" . }}
+  {{ end }}
+
+</article>
+{{ end }}
