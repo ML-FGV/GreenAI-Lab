@@ -1,4 +1,4 @@
-colorScheme = "avocado"
+colorScheme = "Ocean"
 defaultAppearance = "light"
 autoSwitchAppearance = false
 
@@ -10,7 +10,7 @@ footer.showAppearanceSwitcher = true
 header.layout = "hybrid"
 
 [homepage]
-layout = "custom"
+layout = "profile"
 
 [list]
 showSummary = true
@@ -22,4 +22,4 @@ showTaxonomies = true
 showReadingTime = false
 showWordCount = true
 showPagination = true
-showAuthor = false
+showAuthor = true

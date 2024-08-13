@@ -4,3 +4,4 @@ summaryLength = 25
 
 [taxonomies]
 author = "authors"
+labmember = "labmembers"

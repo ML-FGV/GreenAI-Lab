@@ -1,3 +1,13 @@
+languageCode = "en"
+languageName = "English"
+languageDirection = "ltr"
+weight = 1
+
 title = "GreenAI Lab"
+
+[params.author]
+  name = "GreenAI Lab"
+  image = "img/greenai.png"
+  headline = "Green AI Lab at School of Applied Mathematics, Getulio Vargas Foundation"
 
 

@@ -10,7 +10,7 @@
 
 [[main]]
   name = "People"
-  pageRef = "/people"
+  pageRef = "/labmembers"
   weight = 30
 
 [[main]]
